@@ -1,0 +1,62 @@
+{
+  "type": "custom.special",
+  "name": "Special section",
+  "sections": {
+    "raj_try_iyBtaW": {
+      "type": "raj-try",
+      "blocks": {
+        "slide_pVFJCt": {
+          "type": "slide",
+          "settings": {
+            "myimage": "shopify:\/\/shop_images\/1.jpg",
+            "mytxt": "Hey! Go to Google",
+            "myurl": "https:\/\/www.google.com",
+            "add-announcment": true,
+            "no-of-products": 26,
+            "gender-select": "male",
+            "add-price": 1000,
+            "add-size": "xx-small",
+            "add-name": "Raj",
+            "header": "main-menu",
+            "footer": "footer",
+            "add-details": "My details here.",
+            "add-article": "try-blog\/try2",
+            "add-blog": "try-blog",
+            "add-collection": "frontpage",
+            "add-coll_list": [
+              "frontpage"
+            ],
+            "button_link": "shopify:\/\/policies\/terms-of-service",
+            "video": "shopify:\/\/files\/videos\/rec1.mp4",
+            "product_description_video": "https:\/\/youtu.be\/UtJ77gcWqaU",
+            "add-html": "<iframe width=\"1280\" height=\"720\" src=\"https:\/\/www.youtube.com\/embed\/UtJ77gcWqaU\" title=\"How to set up custom and personalized products on Shopify (free)\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen=\"\"><\/iframe>",
+            "my-inline": "<p>My rich text<strong> fghgtghrthrththt <\/strong><a href=\"https:\/\/www.google.com\" title=\"Google\"><em><strong>hgfdsfghjhgfdswert6t5refghytrews<\/strong><\/em><\/a><\/p>",
+            "message": "Hello {{ section.settings.text }}, welcome to our shop.",
+            "page": "all-producrs",
+            "product": "boat-rockerz-450-masaba-edition-headphones",
+            "enable_payment_button": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_pVFJCt"
+      ],
+      "disabled": true,
+      "settings": {
+        "text": "Raj",
+        "product_list": [
+          "boat-rockerz-450-masaba-edition-headphones",
+          "boldfit-adjustable-hand-grip-strengthener-hand-gripper-for-men-women-for-gym-workout-hand-exercise-equipment-to-use-in-home-for-forearm-exercise-finger-exercise-power-gripper"
+        ],
+        "add-color": "#ffffff",
+        "add-bg": "#000551",
+        "add-scheme": "inverse",
+        "add-font-picker": "abel_n4",
+        "alignment": "center"
+      }
+    }
+  },
+  "order": [
+    "raj_try_iyBtaW"
+  ]
+}

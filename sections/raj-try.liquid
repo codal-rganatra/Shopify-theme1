@@ -1,0 +1,315 @@
+<h1>{{ section.settings.text }}</h1>
+{% for block in section.blocks %}
+  {% if block.type == 'slide' %}
+    <a href="{{ block.settings.myurl }}">{{ block.settings.mytxt }}</a>
+    <img src="{{ block.settings.myimage | img_url:'200x' }}" width="200" height="200">
+    <p>Number of Products: {{ block.settings['no-of-products'] }}</p>
+    <p>Gender: {{ block.settings['gender-select'] }}</p>
+    <p>Price: {{ block.settings['add-price'] }}</p>
+    <p>Size: {{ block.settings['add-size'] }}</p>
+    <p>Name: {{ block.settings['add-name'] }}</p>
+    <p>Details: {{ block.settings['add-details'] }}</p>
+    <p>Article Title:{{ block.settings['add-article'].title }}</p>
+    <p>Article author:{{ block.settings['add-article'].author }}</p>
+    <p>Article content:{{ block.settings['add-article'].content }}</p>
+    <p>Blog Title:{{ block.settings['add-blog'].title }}</p>
+    <p>Blog URL:{{ block.settings['add-blog'].url }}</p>
+    <p>Blog article count:{{ block.settings['add-blog'].articles_count }}</p>
+    <p>Collection product count:{{ block.settings['add-collection'].all_products_count }}</p>
+    <p>Collection title:{{ block.settings['add-collection'].title }}</p>
+    <!-- <video src="{{ block.settings.add-html }}"></video> -->
+    <div>{{ block.settings['add-html'] }}</div>
+    <p>Inline Rich:{{ section.settings['my-inline'] }}</p>
+    <p>Menu:{{ section.settings.menu.title }}</p>
+    <!-- <p>Links first:{{ section.settings.menu.links.first.url }}</p> -->
+    <p>Liquid code message:{{ block.settings.message }}</p>
+    <p>Page published at:{{ block.settings.page.published_at }}</p>
+    <p>Product ID:{{ block.settings.product.id }}</p>
+
+    <p>Product list data:{{ section.settings.product_list | first | json }}</p>
+    <p>Collection list data: {{ block.settings['add-coll_list'].size | json }}</p>
+
+    <a href="{{ block.settings.button_link }}"> Go to Link</a>
+    <a href="{{ block.settings.product_description_video }}">Vid1</a>
+    <p>Value:{{ block.settings.enable_payment_button }}</p>
+    <p>Head menu data: {{ block.settings.header.links.first.title }}</p>
+    <p>Footer menu data: {{ block.settings.footer.links.first.title }}</p>
+
+    <!--
+      <p>
+        Richtext-block:
+        {{ block.settings['my-inline'] }}
+      </p>
+    -->
+
+  {% elsif block.type == 'paragraph' %}
+    <p>{{ block.settings.details }}</p>
+  {% elsif block.type == '@app' %}
+    {% render block %}
+  {% endif %}
+{% endfor %}
+<style>
+  .grid-disp{
+    display: flex;
+    flex-direction: column;
+    background-color: {{ section.settings.add-bg }};
+    color: {{ section.settings.add-color }};
+    text-align: {{ section.settings.alignment }};
+    font-family: {{ section.settings['add-font-picker'].family }};
+  }
+</style>
+{% schema %}
+{
+  "name": "my custom section",
+  "tag": "section",
+  "max_blocks":20,
+  "class":"grid-disp",
+  "settings": [
+    {
+      "type":"text",
+      "id":"text",
+      "label":"label1"
+    },
+      {
+        "type": "product_list",
+        "id": "product_list",
+        "label": "Products",
+        "limit": 12
+      },
+    {
+      "type":"color",
+      "id":"add-color",
+       "label":"Add your Color here"
+    },
+    {
+      "type":"color_background",
+      "id":"add-bg",
+      "label":"Add your Background here",
+      "default":"linear-gradient(#ffffff, #000000)"
+    },
+    {
+      "type":"color_scheme",
+      "id":"add-scheme",
+      "label":"Add your Color Scheme here"
+    },
+    {
+      "type":"font_picker",
+      "id":"add-font-picker",
+      "label":"Add your Font Picker",
+      "default":"helvetica_n4"
+    },
+
+    {
+      "type": "text_alignment",
+      "id": "alignment",
+      "label": "Text alignment",
+      "default": "center"
+    }
+  ],
+  "limit":2,
+
+  "presets": [
+    {
+      "name": "my custom section",
+      "settings": {
+
+      },
+      "blocks":[
+        {
+          "type":"slide"
+        }
+      ]
+    }
+  ],
+  "blocks":[
+    {
+      "name":"Slide",
+      "type":"slide",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"myimage",
+          "label":"Add Image"
+        },
+        {
+          "type":"text",
+          "id":"mytxt",
+          "label":"Add Text"
+        },
+        {
+          "type":"url",
+          "id":"myurl",
+          "label":"URL"
+        },
+        {
+          "type":"checkbox",
+          "id":"add-announcment",
+          "label":"Show Announcement"
+        },
+        {
+          "type":"number",
+          "id":"no-of-products",
+          "label":"Number of Products",
+          "default":30
+        },
+        {
+          "type":"radio",
+          "id":"gender-select",
+          "label":"Select Your Gender",
+          "options":[
+            {
+              "value":"male",
+              "label":"Male"
+            },
+            {
+              "value":"female",
+              "label":"Female"
+            },
+            {
+              "value":"other",
+              "label":"Other"
+            }
+          ]
+        },
+        {
+          "type":"range",
+          "id":"add-price",
+          "label":"Enter the price",
+          "min":100,
+          "max":5000,
+          "step":50,
+          "unit":"Rs.",
+          "default":1000
+        },
+        {
+          "type":"select",
+          "id":"add-size",
+          "label":"Select your size",
+          "options":[
+            {
+              "value":"xx-small",
+              "label":"XXS"
+            },
+            {
+              "value":"x-small",
+              "label":"XS"
+            },
+            {
+              "value":"small",
+              "label":"S"
+            },
+            {
+              "value":"medium",
+              "label":"M"
+            },
+            {
+              "value":"large",
+              "label":"L"
+            },
+            {
+              "value":"x-large",
+              "label":"XL"
+            }
+          ]
+        },
+        {
+          "type":"text",
+          "id":"add-name",
+          "label":"Enter your name here"
+        },
+        {
+          "type": "link_list",
+          "id": "header",
+          "label": "head"
+        },
+        {
+          "type": "link_list",
+          "id": "footer",
+          "label": "foot"
+        },
+        {
+          "type":"textarea",
+          "id":"add-details",
+          "label":"Add your details here"
+        },
+        {
+          "type":"article",
+          "id":"add-article",
+          "label":"Add your article here"
+        },
+        {
+          "type":"blog",
+          "id":"add-blog",
+          "label":"Add your Blog here"
+        },
+        {
+          "type":"collection",
+          "id":"add-collection",
+          "label":"Add your Collection here"
+        },
+        {
+          "type":"collection_list",
+          "id":"add-coll_list",
+          "label":"Add your Collection List here"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "A Shopify-hosted video"
+        },
+        {
+          "type": "video_url",
+          "id": "product_description_video",
+          "label": "Product description video",
+          "accept": [
+            "youtube",
+            "vimeo"
+          ]
+        },
+        {
+          "type":"html",
+          "id":"add-html",
+          "label":"Add your HTML here"
+        },
+        {
+          "type": "richtext",
+          "id": "my-inline",
+          "label": "Inline rich text",
+          "default":"<p>My rich text</p>"
+        },
+        {
+      "type": "liquid",
+      "id": "message",
+      "label": "Message",
+      "default": "Hello {{ section.settings.text }}, welcome to our shop."
+        },
+      {
+        "type": "page",
+        "id": "page",
+        "label": "Page"
+      },
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Product"
+      },
+    {
+      "type": "checkbox",
+      "id": "enable_payment_button",
+      "label": "Show dynamic checkout button",
+      "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/online-store/dynamic-checkout)",
+      "default": true
+    }
+   ]
+    },
+    {
+      "type":"@app"
+    }
+  ]
+}
+{% endschema %}

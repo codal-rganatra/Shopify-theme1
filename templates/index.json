@@ -1,0 +1,215 @@
+{
+  "sections": {
+    "raj_try_tAC9aN": {
+      "type": "raj-try",
+      "blocks": {
+        "slide_YbbdDh": {
+          "type": "slide",
+          "settings": {
+            "myimage": "shopify:\/\/shop_images\/g1.jpg",
+            "mytxt": "Hey There",
+            "myurl": "https:\/\/www.google.com",
+            "add-announcment": false,
+            "no-of-products": 30,
+            "gender-select": "male",
+            "add-price": 1000,
+            "add-size": "xx-small",
+            "add-name": "",
+            "header": "",
+            "footer": "",
+            "add-details": "",
+            "add-article": "",
+            "add-blog": "",
+            "add-collection": "",
+            "add-coll_list": [],
+            "button_link": "",
+            "product_description_video": "",
+            "add-html": "",
+            "my-inline": "<p>My rich text<\/p>",
+            "message": "Hello {{ section.settings.text }}, welcome to our shop.",
+            "page": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_YbbdDh"
+      ],
+      "disabled": true,
+      "settings": {
+        "text": "Hi! My name is Raj",
+        "product_list": [
+          "boat-rockerz-450-masaba-edition-headphones",
+          "boldfit-adjustable-hand-grip-strengthener-hand-gripper-for-men-women-for-gym-workout-hand-exercise-equipment-to-use-in-home-for-forearm-exercise-finger-exercise-power-gripper",
+          "demo-prod1"
+        ],
+        "add-color": "",
+        "add-bg": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1) 100%)",
+        "add-scheme": "",
+        "add-font-picker": "helvetica_n4",
+        "alignment": "center",
+        "enable_payment_button": true
+      }
+    },
+    "raj_try_gkiByB": {
+      "type": "raj-try",
+      "blocks": {
+        "slide_WAVRzm": {
+          "type": "slide",
+          "settings": {
+            "myimage": "shopify:\/\/shop_images\/close-up-of-a-pine-tree-showing-texture-of-pine-needles.jpg",
+            "mytxt": "Go to Facebook",
+            "myurl": "https:\/\/facebook.com",
+            "add-announcment": false,
+            "no-of-products": 30,
+            "gender-select": "male",
+            "add-price": 1000,
+            "add-size": "xx-small",
+            "add-name": "",
+            "header": "",
+            "footer": "",
+            "add-details": "",
+            "add-article": "",
+            "add-blog": "",
+            "add-collection": "",
+            "add-coll_list": [],
+            "button_link": "",
+            "product_description_video": "",
+            "add-html": "",
+            "my-inline": "<p>My rich text<\/p>",
+            "message": "Hello {{ section.settings.text }}, welcome to our shop.",
+            "page": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_WAVRzm"
+      ],
+      "disabled": true,
+      "settings": {
+        "text": "",
+        "product_list": [],
+        "add-color": "",
+        "add-bg": "linear-gradient(#ffffff, #000000)",
+        "add-scheme": "",
+        "add-font-picker": "helvetica_n4",
+        "alignment": "center",
+        "enable_payment_button": true
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Show my blog",
+            "button_link_1": "shopify:\/\/pages\/blog-show",
+            "button_style_secondary_1": true,
+            "button_label_2": "fuisrfhuk",
+            "button_link_2": "shopify:\/\/collections\/frontpage",
+            "button_style_secondary_2": true
+          }
+        },
+        "text_zqQhH8": {
+          "type": "text",
+          "settings": {
+            "text": "Transform your skincare routine with our vegan products. Experience the beauty of plant-based ingredients for healthy, radiant skin.",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button",
+        "text_zqQhH8"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_KYmwAa": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "blog": "try-blog",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "page_LNefwA": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "page": "blog-show",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "raj_try_tAC9aN",
+    "raj_try_gkiByB",
+    "image_banner",
+    "featured_collection",
+    "featured_blog_KYmwAa",
+    "page_LNefwA"
+  ]
+}
